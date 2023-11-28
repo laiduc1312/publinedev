@@ -2528,13 +2528,6 @@ local Window = OrionLib:MakeWindow({Name = "PublineDEV", HidePremium = false, In
 
 OrionLib:MakeNotification({
 	Name = "PublineDEV",
-	Content = "Choose Teams",
-	Image = "rbxassetid://4483345998",
-	Time = 7
-})
-
-OrionLib:MakeNotification({
-	Name = "PublineDEV",
 	Content = "Script by laiduc1312",
 	Image = "rbxassetid://4483345998",
 	Time = 25
@@ -2730,7 +2723,7 @@ local Section = M:AddSection({
     Name = "Select Weapon"
 })
 
-M:AddParagraph("Select Weapon","Please Select Weapon")
+M:AddParagraph("Select Weapon")
 
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
@@ -2845,7 +2838,7 @@ end
         Name = "Other Farm"
     })
 
-    M:AddParagraph("Redeem Code","Click to Button to Reddem All Code In Blox Fruits.")
+    M:AddParagraph("Redeem Code")
 
     local x2Code = {
         "JULYUPDATE_RESET",
@@ -2895,7 +2888,7 @@ end
     })
 
 
-M:AddParagraph("Main Farm","Click to Box to Farm, I ready update new mob farm!.")
+M:AddParagraph("Main Farm")
 
 ToggleFarm = M:AddToggle({
     Name = "Auto Farm",
@@ -2912,7 +2905,7 @@ local Section = M:AddSection({
     Name = "Mastery Menu"
 })
 
-M:AddParagraph("Mastery Menu","Click To Box to Start Farm Mastery")
+M:AddParagraph("Mastery Menu")
 
 M:AddToggle({
     Name = "Auto Farm BF Mastery",
@@ -3164,7 +3157,7 @@ local Section = M:AddSection({
 })
 
 M:AddToggle({
-    Name = "Bypass TP[BETA]",
+    Name = "Bypass TP",
     Default = false,
     Flag = "Bypass TP",
     Save = true,
