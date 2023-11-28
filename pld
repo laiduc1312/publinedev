@@ -2519,7 +2519,7 @@ spawn(function()
     repeat
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Starting<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Starting......<Color=/>"):Display()
     wait(.36)
 end)
 
