@@ -2638,11 +2638,6 @@ local Section = W:AddSection({
     Name = "Update"
 })
 
-W:AddLabel("[+] PublineDEV is back!")
-W:AddLabel("[+] I Not Skidder!")
-W:AddLabel("[+] I Will overcome Hirimii,MTriet Hub!!!")
-W:AddLabel("[+] Load Script Faster!")
-
 local Section = W:AddSection({
     Name = "Status"
 })
