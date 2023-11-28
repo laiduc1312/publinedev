@@ -2519,10 +2519,8 @@ spawn(function()
     repeat
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Starting......<Color=/>"):Display()
-    wait(.36)
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>discord.gg/KqUgYjN9A4<Color=/>"):Display()
-    wait(.37)
+    wait(.36)
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
