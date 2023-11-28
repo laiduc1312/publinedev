@@ -2836,10 +2836,6 @@ if World2 and World1 then
     })
 end
 
-    local Section = M:AddSection({
-        Name = "Other Farm"
-    })
-
     M:AddParagraph("Redeem Code")
 
     local x2Code = {
