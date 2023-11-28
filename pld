@@ -2814,18 +2814,7 @@ end
         "TY_FOR_WATCHING",
         "STARCODEHEO"
     }
-    local WeaponList = {"Melee","Sword","Fruit","Gun"}
-_G.SelectWeapon = "Melee"
-M:AddDropdown({
-    Name = "Select Weapon",
-    Default = "",
-    Options = WeaponList,
-    Flag = "Select Weapon",
-    Save = true,
-    Callback = function(Value)
-        _G.SelectWeapon = Value
-    end    
-})
+    
 task.spawn(function()
     while wait() do
         pcall(function()
@@ -2867,6 +2856,18 @@ task.spawn(function()
     end)
     local Section = M:AddSection({
         Name = "Auto Farm Level"
+    })
+    local WeaponList = {"Melee","Sword","Fruit","Gun"}
+    _G.SelectWeapon = "Melee"
+    M:AddDropdown({
+        Name = "Select Weapon",
+        Default = "",
+        Options = WeaponList,
+        Flag = "Select Weapon",
+        Save = true,
+        Callback = function(Value)
+            _G.SelectWeapon = Value
+        end    
     })
     M:AddButton({
         Name = "Redeem all code",
