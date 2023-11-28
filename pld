@@ -3281,20 +3281,6 @@ M:AddToggle({
         StopTween(_G.AutoFarmNearest)
     end    
 })
-
-    local Section = M:AddSection({
-        Name = "Chest Farm"
-    })
-
-M:AddToggle({
-    Name = "Stop Only Dark Key or God's Chalice",
-    Default = false,
-    Flag = "Stop Only Dark Key or God's Chalice",
-    Save = true,
-    Callback = function(Value)
-        _G.StopChest = Value
-    end    
-})
 spawn(function()
     while wait() do
     if _G.StopChest then
@@ -3447,7 +3433,6 @@ local Section = M:AddSection({
     Name = "Boss"
 })
 
-M:AddParagraph("Auto Farm Boss :","Chờ Update thôi ae!!!")
 
     local Section = M:AddSection({
         Name = "Observation Haki"
