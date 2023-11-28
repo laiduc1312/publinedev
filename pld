@@ -20,7 +20,7 @@ function CheckQuest()
             CFrameMon = CFrame.new(1045.962646484375, 27.00250816345215, 1560.8203125)
         elseif MyLevel == 10 or MyLevel <= 14 then
             Mon = "Monkey"
-            LevelQuest = 1fh
+            LevelQuest = 1
             NameQuest = "JungleQuest"
             NameMon = "Monkey"
             CFrameQuest = CFrame.new(-1598.08911, 35.5501175, 153.377838, 0, 0, 1, 0, 1, -0, -1, 0, 0)
@@ -2370,12 +2370,12 @@ local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
 CamShake:Stop()
 
     HttpService = game:GetService("HttpService")
-    local i = "PublineDEV"
+    local i = "Night Hub"
     local j = "-BloxFruit.json"
     local l = game.Players.LocalPlayer.Name .. j
     if Adel then
         HttpService = game:GetService("HttpService")
-        local i = "PublineDEV"
+        local i = "Night Hub"
         local j = "-BloxFruit.json"
         local l = game.Players.LocalPlayer.Name .. j
     end
@@ -2520,28 +2520,37 @@ spawn(function()
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
     wait(1.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>Starting...<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>Sau Vài ngày chìm nghỉm<Color=/>"):Display()
     wait(.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>Thì Night Hub đã trở lại!!!!!<Color=/>"):Display()
+    wait(.14)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Hãy sử dụng Fluxus để có trải nghiệm tốt!!<Color=/>"):Display()
+    wait(.24)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Tham gia disocrd để cập nhật thông tin mới nhất nhé<Color=/>"):Display()
+    wait(.29)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Channel : LMNGAMING <Color=/>"):Display()
+    wait(.36)
 end)
 
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Night Hub", HidePremium = false, IntroText = "NightHub Library", SaveConfig = true, ConfigFolder = "Night Hub"})
 
-Fluent:Notify({
-	Name = "PublineDEV",
-	Content = "Choose Teams",
+OrionLib:MakeNotification({
+	Name = "Night Hub",
+	Content = "Choose Teams Bro?",
 	Image = "rbxassetid://4483345998",
 	Time = 7
 })
 
-Fluent:Notify({
-	Name = "PublineDEV",
-	Content = "laiduc1312",
+OrionLib:MakeNotification({
+	Name = "Night Hub",
+	Content = "Night Hub Not Skidder, Please don't says",
 	Image = "rbxassetid://4483345998",
 	Time = 25
 })
 
-Fluent:Notify({
-    Name = "PublineDEV",
+OrionLib:MakeNotification({
+    Name = "Night Hub",
     Content = "Please Wait loading script...,Do not enable any function",
     Image = "rbxassetid://4483345998",
     Time = 5
@@ -2550,85 +2559,85 @@ Fluent:Notify({
 -------------Tab-----------------------
 
 local W = Window:MakeTab({
-    Name = "Welcome",
+    Name = "👋 Welcome",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local M = Window:MakeTab({
-    Name = "General",
+    Name = "🏠 General",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local ST = Window:MakeTab({
-    Name = "Setting",
+    Name = "🛠️ Setting",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local IQ = Window:MakeTab({
-    Name = "Item & Quest",
+    Name = "⚔️ Item & Quest",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local S = Window:MakeTab({
-    Name = "Stats",
+    Name = "📊 Stats",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local E = Window:MakeTab({
-    Name = "ESP",
+    Name = "🔎 ESP",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local RA = Window:MakeTab({
-    Name = "Raid",
+    Name = "🎆 Raid",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local LC = Window:MakeTab({
-    Name = "Local Players",
+    Name = "🙆‍♂️ Local Players",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local Wld = Window:MakeTab({
-    Name = "World Teleport",
+    Name = "🌍 World Teleport",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SV = Window:MakeTab({
-    Name = "Status Sever",
+    Name = "📈 Status Sever",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local D = Window:MakeTab({
-    Name = "Devil Fruit",
+    Name = "🍍 Devil Fruit",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local R = Window:MakeTab({
-    Name = "Race V4",
+    Name = "☣️ Race V4",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
-    Name = "Shop",
+    Name = "🛒 Shop",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local C = Window:MakeTab({
-    Name = "Misc",
+    Name = "🔰 Misc",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2639,11 +2648,16 @@ local Section = W:AddSection({
 })
 
 
-W:AddLabel("Script By laiduc1312")
+W:AddLabel("Script By LMNGAMING")
 
 local Section = W:AddSection({
     Name = "Update"
 })
+
+W:AddLabel("[+] Night Hub is back!")
+W:AddLabel("[+] I Not Skidder!")
+W:AddLabel("[+] I Will overcome Hirimii,MTriet Hub!!!")
+W:AddLabel("[+] Load Script Faster!")
 
 local Section = W:AddSection({
     Name = "Status"
@@ -8353,14 +8367,14 @@ pcall(function()
     while wait() do
         if _G.AutoEliteHunter then
             if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true then
-                Fluent:Notify({
-                    Name = "PublineDEV(Noitification)",
+                OrionLib:MakeNotification({
+                    Name = "Night Hub(Noitification)",
                     Content = "[EN] : Please cancel the farrm level quest (if any)",
                     Image = "rbxassetid://4483345998",
                     Time = 9
                 })
-                Fluent:Notify({
-                    Name = "PublineDEV(Noitification)",
+                OrionLib:MakeNotification({
+                    Name = "Night Hub(Noitification)",
                     Content = "[VN] : Làm ơn hủy nhiệm vụ farrm level(nếu có)",
                     Image = "rbxassetid://4483345998",
                     Time = 9
@@ -8528,8 +8542,8 @@ spawn(function()
         while wait() do
             if _G.AutoObservation then
                 if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
-                    Fluent:Notify({
-                        Name = "PublineDEV BOT",
+                    OrionLib:MakeNotification({
+                        Name = "NIGHT HUB BOT",
                         Content = "!!You Are Max Point!!",
                         Image = "rbxassetid://14919714384",
                         Time = 5
@@ -8677,8 +8691,8 @@ spawn(function()
     if _G.AutoSharkman then
         if Mybeli <= 2500000 or MyFragment <= 5000 then
             wait(2.0)
-            Fluent:Notify({
-                Name = "PublineDEV",
+            OrionLib:MakeNotification({
+                Name = "Night Hub",
                 Content = "You not have beli or fragment!",
                 Image = "rbxassetid://4483345998",
                 Time = 5
@@ -8838,8 +8852,8 @@ spawn(function()
                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
                         end
                     else
-                        Fluent:Notify({
-                            Name = "PublineDEV BOT",
+                        OrionLib:MakeNotification({
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have Superhuman",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8851,8 +8865,8 @@ spawn(function()
                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
                         end
                     else
-                        Fluent:Notify({
-                            Name = "PublineDEV BOT",
+                        OrionLib:MakeNotification({
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have Death Step",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8864,8 +8878,8 @@ spawn(function()
                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
                         end
                     else
-                        Fluent:Notify({
-                            Name = "PublineDEV BOT",
+                        OrionLib:MakeNotification({
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have SharkMan Karate",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8877,8 +8891,8 @@ spawn(function()
                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
                         end
                     else
-                        gFluent:Notify({
-                            Name = "PublineDEV BOT",
+                        gOrionLib:MakeNotification({
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have Electric Claw",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8888,8 +8902,8 @@ spawn(function()
                     if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon",true) == 1 then
                         if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon") and game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon").Level.Value >= 400 or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon") and game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon").Level.Value >= 400 then
                             if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true), "Bring") then
-                                Fluent:Notify({
-                                    Name = "PublineDEV BOT",
+                                OrionLib:MakeNotification({
+                                    Name = "NIGHT HUB BOT",
                                     Content = "Not Have Enough Material",
                                     Image = "rbxassetid://14919714384",
                                     Time = 5
@@ -8900,8 +8914,8 @@ spawn(function()
                             end
                         end
                     else
-                        Fluent:Notify({
-                            Name = "PublineDEV BOT",
+                        OrionLib:MakeNotification({
+                            Name = "NIGHT HUB BOT",
                             Content = "You Not Have Dragon Talon! ",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -11299,32 +11313,32 @@ spawn(function()
             if _G.Hopfindmoon then
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
                 wait(2.0)
-                Fluent:Notify({
-                    Name = "PublineDEV",
+                OrionLib:MakeNotification({
+                    Name = "Night Hub",
                     Content = "Turn Off Hop Find Moon Please",
                     Image = "rbxassetid://4483345998",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
                 Hop()
-                Fluent:Notify({
-                    Name = "PublineDEV",
+                OrionLib:MakeNotification({
+                    Name = "Night Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
                 Hop()
-                Fluent:Notify({
-                    Name = "PublineDEV",
+                OrionLib:MakeNotification({
+                    Name = "Night Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
                 Hop()
-                Fluent:Notify({
-                    Name = "PublineDEV",
+                OrionLib:MakeNotification({
+                    Name = "Night Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11336,8 +11350,8 @@ spawn(function()
         end
     end)
 
-Fluent:Notify({
-        Name = "PublineDEV",
+OrionLib:MakeNotification({
+        Name = "Night Hub",
         Content = "Loading script complete!, You can now enable the function!",
         Image = "rbxassetid://4483345998",
         Time = 5
@@ -11377,10 +11391,10 @@ spawn(function()
     end
 end)
 
-Fluent:Init()
+OrionLib:Init()
 
-Fluent:Notify({
-    Name = "PublineDEV",
+OrionLib:MakeNotification({
+    Name = "Night Hub",
     Content = "Loading Config Complete!!",
     Image = "rbxassetid://4483345998",
     Time = 5
