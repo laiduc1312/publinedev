@@ -2888,9 +2888,18 @@ end
     local Section = M:AddSection({
         Name = "Auto Farm Level"
     })
+    M:AddButton({
+        Name = "Redeem all code",
+        Callback = function()
+            function RedeemCode(value)
+                game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(value)
+            end
+            for i,v in pairs(x2Code) do
+                RedeemCode(v)
+            end
+          end    
+    })
 
-
-M:AddParagraph("Main Farm")
 
 ToggleFarm = M:AddToggle({
     Name = "Auto Farm",
