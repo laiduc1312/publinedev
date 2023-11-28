@@ -2533,6 +2533,13 @@ OrionLib:MakeNotification({
 	Time = 25
 })
 
+OrionLib:MakeNotification({
+	Name = "PublineDEV",
+	Content = "Wait for load script",
+	Image = "rbxassetid://4483345998",
+	Time = 25
+})
+
 -------------Tab-----------------------
 
 local W = Window:MakeTab({
