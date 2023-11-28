@@ -2524,19 +2524,19 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "PublineDEV 🥒", HidePremium = false, IntroText = "PublineDEV", SaveConfig = true, ConfigFolder = "PublineDEV"})
+local Window = OrionLib:MakeWindow({Name = "PublineDEV 🥝", HidePremium = false, IntroText = "PublineDEV", SaveConfig = true, ConfigFolder = "PublineDEV"})
 
 OrionLib:MakeNotification({
 	Name = "PublineDEV",
 	Content = "Script by laiduc1312",
-	Image = "rbxassetid://4483345998",
+	Image = "rbxassetid://1336057779",
 	Time = 25
 })
 
 OrionLib:MakeNotification({
 	Name = "PublineDEV",
 	Content = "Wait for load script",
-	Image = "rbxassetid://4483345998",
+	Image = "rbxassetid://1336057779",
 	Time = 25
 })
 
@@ -2544,85 +2544,85 @@ OrionLib:MakeNotification({
 
 local W = Window:MakeTab({
     Name = "Welcome",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local M = Window:MakeTab({
     Name = "General",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local ST = Window:MakeTab({
     Name = "Setting",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local IQ = Window:MakeTab({
     Name = "Item & Quest",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local S = Window:MakeTab({
     Name = "Stats",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local E = Window:MakeTab({
     Name = "ESP",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local RA = Window:MakeTab({
     Name = "Raid",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local LC = Window:MakeTab({
     Name = "Local Players",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local Wld = Window:MakeTab({
     Name = "World Teleport",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local SV = Window:MakeTab({
     Name = "Status Sever",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local D = Window:MakeTab({
     Name = "Devil Fruit",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local R = Window:MakeTab({
     Name = "Race V4",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
     Name = "Shop",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
 local C = Window:MakeTab({
     Name = "Misc",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://1336057779",
     PremiumOnly = false
 })
 
@@ -2730,7 +2730,17 @@ local Section = M:AddSection({
     Name = "Select Weapon"
 })
 
-M:AddParagraph("Select Weapon","Chọn vũ khí")
+M:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("Select Weapon")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
@@ -2790,7 +2800,7 @@ if World2 and World1 then
     })
 
     M:AddButton({
-        Name = "BOOST FPS",
+        Name = "Boot FPS",
         Callback = function()
             pcall(function()
                 game:GetService("Lighting").FantasySky:Destroy()
@@ -2909,13 +2919,13 @@ ToggleFarm = M:AddToggle({
 })
 
 local Section = M:AddSection({
-    Name = "Mastery Menu"
+    Name = "Mastery Farm"
 })
 
 M:AddParagraph("Mastery Menu")
 
 M:AddToggle({
-    Name = "Auto Farm BF Mastery",
+    Name = "Auto Farm Fruit Mastery",
     Default = false,
     Flag = "Mastery",
     Save = true,
@@ -3015,7 +3025,7 @@ M:AddToggle({
     })
 
 M:AddToggle({
-    Name = "Bring Mobs[Fix]",
+    Name = "Bring Mobs",
     Default = true,
     Flag = "Bring Mobs",
     Save = false,
@@ -8113,14 +8123,8 @@ pcall(function()
             if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true then
                 OrionLib:MakeNotification({
                     Name = "PublineDEV(Noitification)",
-                    Content = "[EN] : Please cancel the farrm level quest (if any)",
-                    Image = "rbxassetid://4483345998",
-                    Time = 9
-                })
-                OrionLib:MakeNotification({
-                    Name = "PublineDEV(Noitification)",
-                    Content = "[VN] : Làm ơn hủy nhiệm vụ farrm level(nếu có)",
-                    Image = "rbxassetid://4483345998",
+                    Content = "[EN] : Cancel the farrm level quest (if any)",
+                    Image = "rbxassetid://1336057779",
                     Time = 9
                 })
             end
@@ -8438,7 +8442,7 @@ spawn(function()
             OrionLib:MakeNotification({
                 Name = "PublineDEV",
                 Content = "You not have beli or fragment!",
-                Image = "rbxassetid://4483345998",
+                Image = "rbxassetid://1336057779",
                 Time = 5
             })
             end
@@ -11060,7 +11064,7 @@ spawn(function()
                 OrionLib:MakeNotification({
                     Name = "PublineDEV",
                     Content = "Turn Off Hop Find Moon Please",
-                    Image = "rbxassetid://4483345998",
+                    Image = "rbxassetid://1336057779",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
@@ -11068,7 +11072,7 @@ spawn(function()
                 OrionLib:MakeNotification({
                     Name = "PublineDEV",
                     Content = "Hop Server",
-                    Image = "rbxassetid://4483345998",
+                    Image = "rbxassetid://1336057779",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
@@ -11076,7 +11080,7 @@ spawn(function()
                 OrionLib:MakeNotification({
                     Name = "PublineDEV",
                     Content = "Hop Server",
-                    Image = "rbxassetid://4483345998",
+                    Image = "rbxassetid://1336057779",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
@@ -11084,7 +11088,7 @@ spawn(function()
                 OrionLib:MakeNotification({
                     Name = "PublineDEV",
                     Content = "Hop Server",
-                    Image = "rbxassetid://4483345998",
+                    Image = "rbxassetid://1336057779",
                     Time = 5
                 })
             else
@@ -11097,7 +11101,7 @@ spawn(function()
 OrionLib:MakeNotification({
         Name = "PublineDEV",
         Content = "Loading script complete!, You can now enable the function!",
-        Image = "rbxassetid://4483345998",
+        Image = "rbxassetid://1336057779",
         Time = 5
     })
 
@@ -11140,6 +11144,6 @@ OrionLib:Init()
 OrionLib:MakeNotification({
     Name = "PublineDEV",
     Content = "Loading Config Complete!!",
-    Image = "rbxassetid://4483345998",
+    Image = "rbxassetid://1336057779",
     Time = 5
 })
