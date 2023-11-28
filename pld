@@ -2786,8 +2786,6 @@ if World2 and World1 then
     })
 end
 
-    M:AddParagraph("Redeem Code")
-
     local x2Code = {
         "JULYUPDATE_RESET",
         "staffbattle",
