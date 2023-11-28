@@ -3597,57 +3597,6 @@ elseif _G.WhiteScreen == false then
     })
 
 local Section = IQ:AddSection({
-    Name = "Saber Menu"
-})
-
-IQ:AddToggle({
-    Name = "Auto Saber",
-    Default = false,
-    Flag = "Auto Saber",
-    Save = true,
-    Callback = function(Value)
-        _G.Auto_Saber = Value
-        StopTween(_G.Auto_Saber)
-    end    
-})
-
-
-IQ:AddToggle({
-    Name = "Auto Saber[HOP]",
-    Default = false,
-    Flag = "Auto Saber[HOP]",
-    Save = true,
-    Callback = function(Value)
-        _G.Hop = Value
-    end    
-})
-
-local Section = IQ:AddSection({
-    Name = "Pole V.1"
-})
-
-TogglePolev1 = IQ:AddToggle({
-    Name = "Auto Pole V.1",
-    Default = false,
-    Flag = "Auto Pole",
-    Save = true,
-    Callback = function(Value)
-        _G.Autopole = Value
-        StopTween(_G.AutoPole)
-    end    
-})
-
-TogglePolev1Hop = IQ:AddToggle({
-    Name = "Auto Pole V.1[HOP]",
-    Default = false,
-    Flag = "Auto Pole[HOP]",
-    Save = true,
-    Callback = function(Value)
-        _G.AutopoleHop = Value
-    end    
-})
-
-local Section = IQ:AddSection({
     Name = "Second Sea"
 })
 
