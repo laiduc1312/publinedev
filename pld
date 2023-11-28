@@ -2726,14 +2726,6 @@ local locallv = W:AddLabel("Level")
             end)
         end
     end)
-local Section = M:AddSection({
-    Name = "Select Weapon"
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
 
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
