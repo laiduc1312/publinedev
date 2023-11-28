@@ -2730,13 +2730,6 @@ local Section = M:AddSection({
     Name = "Select Weapon"
 })
 
-M:AddButton({
-	Name = "Button!",
-	Callback = function()
-      		print("Select Weapon")
-  	end    
-})
-
 --[[
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
