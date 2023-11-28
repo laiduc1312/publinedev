@@ -2524,7 +2524,7 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "PublineDEV", HidePremium = false, IntroText = "PublineDEV", SaveConfig = true, ConfigFolder = "PublineDEV"})
+local Window = OrionLib:MakeWindow({Name = "PublineDEV 🥒", HidePremium = false, IntroText = "PublineDEV", SaveConfig = true, ConfigFolder = "PublineDEV"})
 
 OrionLib:MakeNotification({
 	Name = "PublineDEV",
