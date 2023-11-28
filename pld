@@ -3158,22 +3158,6 @@ spawn(function()
         end
     end
 end)
-
-local Section = M:AddSection({
-    Name = "Bypass Teleport"
-})
-
-M:AddToggle({
-    Name = "Bypass TP",
-    Default = false,
-    Flag = "Bypass TP",
-    Save = true,
-    Callback = function(Value)
-        BypassTP = true 
-    end    
-})
-
-
 local Section = M:AddSection({
     Name = "Distance Mobs"
 })
@@ -3210,45 +3194,7 @@ Farmfasttoggle = M:AddToggle({
     end    
 })
 
-local Section = M:AddSection({
-    Name = "Kaitun Met Vaiz"
-})
 
-M:AddParagraph("Kaitun/Cantay","Kaitun bản này đell khác gì bản kia.")
-
-M:AddToggle({
-    Name = "Kaitun[Ko có kill players]",
-    Default = false,
-    Flag = "Kaitun",
-    Save = true,
-    Callback = function(Value)
-        _G.RedeemCode = Value
-        _G.AutoFarm = Value
-        _G.Farmfast = Value
-       _G.SelectWeapon = "Combat"
-       _G.AutoPlayerHunter = Value
-       _G.Auto_Stats_Kaitun = Value
-       _G.Auto_Saber = Value
-       _G.AutoSuperhuman = Value
-       _G.AutoBartilo = Value
-       _G.AutoBuyLegendarySword = Value
-       _G.BuyAllAib = Value
-       StopTween(_G.AutoFarm)
-       StopTween(_G.Hunter)
-       StopTween(_G.Farmfast)
-       StopTween(_G.Auto_Saber)
-    end    
-})
-
-M:AddToggle({
-    Name = "Auto Click[Kick]",
-    Default = false,
-    Flag = "Auto Click",
-    Save = true,
-    Callback = function(Value)
-        _G.AutoClick = Value
-    end    
-})
 
 spawn(function()
     game:GetService("RunService").RenderStepped:Connect(function()
@@ -3338,27 +3284,6 @@ M:AddToggle({
 
     local Section = M:AddSection({
         Name = "Chest Farm"
-    })
-
-TweenChest = M:AddToggle({
-        Name = "Auto Chest [MUP]",
-        Default = false,
-        Flag = "Auto Chest",
-        Save = true,
-        Callback = function(Value)
-            AutoFarmChest = Value
-            StopTween(AutoFarmChest)
-        end    
-    })
-
-    M:AddToggle({
-        Name = "Auto Chest[Bypass]",
-        Default = false,
-        Flag = "Auto Chest[Bypass]",
-        Save = true,
-        Callback = function(Value)
-            _G.ChestBypass = Value
-        end    
     })
 
 M:AddToggle({
@@ -3687,19 +3612,6 @@ local Section = IQ:AddSection({
     Name = "Saber Menu"
 })
 
-local SaberBoss = IQ:AddLabel("Boss Saber : ")
-spawn(function()
-    while wait() do
-        pcall(function()
-            if game:GetService("ReplicatedStorage"):FindFirstChild("Saber Expert") or game:GetService("ReplicatedStorage"):FindFirstChild("Saber Expert") or game:GetService("ReplicatedStorage"):FindFirstChild("Saber Expert") or game:GetService("Workspace").Enemies:FindFirstChild("Saber Expert") or game:GetService("Workspace").Enemies:FindFirstChild("Saber Expert") or game:GetService("Workspace").Enemies:FindFirstChild("Saber Expert") then
-                SaberBoss:Set("Boss Saber : ✅ Spawn")
-            else
-                SaberBoss:Set("Boss Saber : ❌ Not Spawn")
-            end
-        end)
-    end
-end)
-
 IQ:AddToggle({
     Name = "Auto Saber",
     Default = false,
@@ -3725,19 +3637,6 @@ IQ:AddToggle({
 local Section = IQ:AddSection({
     Name = "Pole V.1"
 })
-
-local PoleBoss = IQ:AddLabel("Boss Thunder God : ")
-spawn(function()
-    while wait() do
-        pcall(function()
-            if game:GetService("ReplicatedStorage"):FindFirstChild("Thunder God") or game:GetService("ReplicatedStorage"):FindFirstChild("Thunder God") or game:GetService("ReplicatedStorage"):FindFirstChild("Thunder God") or game:GetService("Workspace").Enemies:FindFirstChild("Thunder God") or game:GetService("Workspace").Enemies:FindFirstChild("Thunder God") or game:GetService("Workspace").Enemies:FindFirstChild("Thunder God") then
-                PoleBoss:Set("Boss Thunder : ✅ Spawn")
-            else
-                PoleBoss:Set("Boss Thunder : ❌ Not Spawn")
-            end
-        end)
-    end
-end)
 
 TogglePolev1 = IQ:AddToggle({
     Name = "Auto Pole V.1",
