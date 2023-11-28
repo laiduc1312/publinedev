@@ -2912,8 +2912,6 @@ local Section = M:AddSection({
     Name = "Mastery Farm"
 })
 
-M:AddParagraph("Mastery Menu")
-
 M:AddToggle({
     Name = "Auto Farm Fruit Mastery",
     Default = false,
