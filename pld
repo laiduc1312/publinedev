@@ -2730,7 +2730,7 @@ local Section = M:AddSection({
     Name = "Select Weapon"
 })
 
-M:AddParagraph("Select Weapon")
+M:AddParagraph("Select Weapon","Chọn vũ khí")
 
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
@@ -4214,15 +4214,6 @@ local Fruit = S:AddLabel("Fruit : ")
         end
     end)
 
-S:AddToggle({
-    Name = "Auto Stats Kaitun",
-    Default = false,
-    Flag = "Auto Kaitun",
-    Save = true,
-    Callback = function(Value)
-        _G.Auto_Stats_Kaitun = Value
-    end    
-})
 
 S:AddToggle({
     Name = "Melee",
