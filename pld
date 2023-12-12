@@ -2550,13 +2550,13 @@ local W = Window:MakeTab({
 
 local M = Window:MakeTab({
     Name = "General",
-    Icon = "rbxassetid://1336057779",
+    Icon = "rbxassetid://7733960981",
     PremiumOnly = false
 })
 
 local ST = Window:MakeTab({
     Name = "Setting",
-    Icon = "rbxassetid://1336057779",
+    Icon = "rbxassetid://8997386997",
     PremiumOnly = false
 })
 
@@ -3664,31 +3664,6 @@ IQ:AddToggle({
     end    
 })
 
-local Section = IQ:AddSection({
-    Name = "Buddy Sword"
-})
-
-IQ:AddToggle({
-    Name = "Auto Buddy Sword",
-    Default = false,
-    Flag = "Auto Buddy",
-    Save = true,
-    Callback = function(Value)
-        _G.AutoBudySword = Value
-        StopTween(_G.AutoBudySword)
-    end    
-})
-
-IQ:AddToggle({
-    Name = "Auto Buddy Sword[HOP]",
-    Default = false,
-    Flag = "Auto Buddy[HOP]",
-    Save = true,
-    Callback = function(Value)
-        _G.Hop = Value
-    end    
-})
-
     local Section = IQ:AddSection({
         Name = "Soul Guita"
     })
@@ -3725,27 +3700,13 @@ IQ:AddToggle({
     end    
 })
 
-local Section = IQ:AddSection({
-    Name = "Auto Dual Curset Katana[Not Work]"
-})
-
-IQ:AddToggle({
-    Name = "Auto Dual Curset Katana",
-    Default = false,
-    Flag = "Auto DualCursetKatana",
-    Save = true,
-    Callback = function(Value)
-        Auto_Cursed_Dual_Katana = Value
-        StopTween(Auto_Cursed_Dual_Katana)
-    end    
-})
 
 local Section = IQ:AddSection({
     Name = "Tushita"
 })
 
 IQ:AddToggle({
-    Name = "Auto Tushita",
+    Name = "Auto boss Tushita",
     Default = false,
     Flag = "Auto Tushita",
     Save = true,
@@ -3757,7 +3718,7 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Auto Tushita[HOP]",
+    Name = "Auto boss Tushita[HOP]",
     Default = false,
     Flag = "Auto Tushita[HOP]",
     Save = true,
@@ -3765,63 +3726,11 @@ IQ:AddToggle({
         _G.Hop = Value
     end  
 })
-
-local Section = IQ:AddSection({
-    Name = "Cavander"
-})
-
-IQ:AddToggle({
-    Name = "Auto Cavander",
-    Default = false,
-    Flag = "Auto Cavander",
-    Save = true,
-    Callback = function(Value)
-        _G.AutoCarvender = Value
-        StopTween( _G.AutoCarvender)
-    end    
-})
-
-IQ:AddToggle({
-    Name = "Auto Cavander[HOP]",
-    Default = false,
-    Flag = "Auto Cavander[HOP]",
-    Save = true,
-    Callback = function(Value)
-        _G.Hop = Value
-    end    
-})
-
-        local Section = IQ:AddSection({
-            Name = "Twin Hook"
-        })
-
-        IQ:AddToggle({
-            Name = "Auto Twin Hook",
-            Default = false,
-            Flag = "Auto Twin",
-            Save = true,
-            Callback = function(Value)
-                _G.AutoTwinHook = Value
-                StopTween( _G.AutoTwinHook)
-            end    
-        })
         
-        IQ:AddToggle({
-            Name = "Auto Twin Hook[HOP]",
-            Default = false,
-            Flag = "Auto Twin[HOP]",
-            Save = true,
-            Callback = function(Value)
-                _G.Hop = Value
-            end    
-        })
         
         local Section = IQ:AddSection({
             Name = "ArenaTrainer"
         })
-
-        IQ:AddLabel("Cho thằng nào đell hiểu thì đây là tự động đánh hình nộm")
-
         IQ:AddToggle({
             Name = "Automatically hit the dummy",
             Default = false,
