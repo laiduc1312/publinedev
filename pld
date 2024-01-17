@@ -4033,7 +4033,6 @@ do
     ToggleButton.Size = UDim2.new(0, 50, 0, 50)
     ToggleButton.Font = Enum.Font.SourceSans
     ToggleButton.Text = "ON/OFF"
-    ToggleButton.Image = "https://www.google.com.vn/url?sa=i&url=https%3A%2F%2Favatars.alphacoders.com%2Favatars%2Fview%2F332416&psig=AOvVaw0Ko40HWVYhStoWwFcjVFP0&ust=1705550131056000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCR_b_D44MDFQAAAAAdAAAAABAD"
     ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     ToggleButton.TextSize = 14.000
     ToggleButton.Draggable = true
