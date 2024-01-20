@@ -8,6 +8,9 @@ spawn(function()
     repeat
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+    wait(1.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red> Welcome To Rimus Hub <Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Discord : Join Rimus's Discord to Get the Latest Information <Color=/>"):Display()
 end)
 
 
@@ -19,7 +22,7 @@ local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-sc
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local L_4_ = L_1_:CreateWindow({
 	Title = "PublineDEV",
-	SubTitle = "Make by laiduc1312,
+	SubTitle = "Make by laiduc1312",
 	TabWidth = 160,
 	Size = UDim2.fromOffset(530, 350),
 	Acrylic = false,
@@ -29,36 +32,47 @@ local L_4_ = L_1_:CreateWindow({
 local L_5_ = {
 	Main = L_4_:AddTab({
 		Title = "Main",
+		Icon = "home"
 	}),
 	Setting = L_4_:AddTab({
 		Title = "Setting",
+		Icon = "settings"
 	}),
 	Stats = L_4_:AddTab({
 		Title = "Stats",
+		Icon = "plus-circle"
 	}),
 	Player = L_4_:AddTab({
 		Title = "Player",
+		Icon = "baby"
 	}),
 	Teleport = L_4_:AddTab({
 		Title = "Island",
+		Icon = "palmtree"
 	}),
 	Fruit = L_4_:AddTab({
 		Title = "Fruit",
+		Icon = "cherry"
 	}),
 	Raid = L_4_:AddTab({
 		Title = "Raid",
+		Icon = "swords"
 	}),
 	Race = L_4_:AddTab({
 		Title = "Race V4",
+		Icon = "chevrons-right"
 	}),
 	Shop = L_4_:AddTab({
 		Title = "Shop",
+		Icon = "shopping-cart"
 	}),
 	Misc = L_4_:AddTab({
 		Title = "Misc",
+		Icon = "list-plus"
 	}),
 	Hop = L_4_:AddTab({
 		Title = "Hop",
+		Icon = "wifi"
 	}),
 }
 local L_6_ = L_1_.Options
@@ -2637,7 +2651,7 @@ do
 	L_92_.BorderSizePixel = 0
 	L_92_.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 	L_92_.Size = UDim2.new(0, 60, 0, 60)
-	L_92_.Image = "rbxassetid://115521940180"
+	L_92_.Image = "rbxassetid://15521940180"
 	L_92_.MouseButton1Click:Connect(function()
 		game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
 	end)
@@ -2794,10 +2808,53 @@ do
 			end
 		end
 	end)
+	local L_99_ = L_5_.Main:AddToggle("ToggleCandy", {
+		Title = "Auto Farm Candy ( Only Max Level )",
+		Default = false
+	})
+	L_99_:OnChanged(function(L_320_arg0)
+		_G.AutoCandy = L_320_arg0
+	end)
+	L_6_.ToggleCandy:SetValue(false)
+	local L_100_ = CFrame.new(- 16603.197265625, 130.3873748779297, 1087.16455078125)
+	spawn(function()
+		while wait() do
+			if _G.AutoCandy then
+				pcall(function()
+					toTargetP(L_100_)
+					if game:GetService("Workspace").Enemies:FindFirstChild("Isle Outlaw") or game:GetService("Workspace").Enemies:FindFirstChild("Island Boy") or game:GetService("Workspace").Enemies:FindFirstChild("Sun-kissed Warrior") or game:GetService("Workspace").Enemies:FindFirstChild("Isle Champion") then
+						for L_321_forvar0, L_322_forvar1 in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+							if L_322_forvar1.Name == "Isle Outlaw" or L_322_forvar1.Name == "Island Boy" or L_322_forvar1.Name == "Sun-kissed Warrior" or L_322_forvar1.Name == "Isle Champion" then
+								if L_322_forvar1:FindFirstChild("Humanoid") and L_322_forvar1:FindFirstChild("HumanoidRootPart") and L_322_forvar1.Humanoid.Health > 0 then
+									repeat
+										wait(_G.Fast_Delay)
+										AttackNoCD()
+										bringmob = true
+										AutoHaki()
+										EquipTool(SelectWeapon)
+										toTarget(L_322_forvar1.HumanoidRootPart.CFrame * CFrame.new(posX, posY, posZ))
+										L_322_forvar1.HumanoidRootPart.Size = Vector3.new(1, 1, 1)
+										L_322_forvar1.HumanoidRootPart.Transparency = 1
+										L_322_forvar1.Humanoid.JumpPower = 0
+										L_322_forvar1.Humanoid.WalkSpeed = 0
+										L_322_forvar1.HumanoidRootPart.CanCollide = false
+										FarmPos = L_322_forvar1.HumanoidRootPart.CFrame
+										MonFarm = L_322_forvar1.Name
+									until not _G.AutoCandy or not L_322_forvar1.Parent or L_322_forvar1.Humanoid.Health <= 0
+									bringmob = false
+								end
+							end
+						end
+						toTarget(CFrame.new(- 16599.1484375, 154.2681121826172, - 166.32186889648438))
+					end
+				end)
+			end
+		end
+	end)
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 	local L_101_ = L_5_.Main:AddToggle("ToggleMobAura", {
-		Title = "Mob Aura",
+		Title = "Kill Near | Mob Aura",
 		Default = false
 	})
 	L_101_:OnChanged(function(L_323_arg0)
@@ -2838,7 +2895,7 @@ do
 		end
 	end)
 	local L_102_ = L_5_.Main:AddToggle("ToggleCastleRaid", {
-		Title = "Auto Castle Raid",
+		Title = "Auto Castle Raid | Pirates Castle",
 		Default = false
 	})
 	L_102_:OnChanged(function(L_326_arg0)
